@@ -1,0 +1,18 @@
+body {
+  font-family: 'Noto Sans', 'Roboto', sans-serif;
+  img {
+    display: block;
+    max-width: 100%;
+  }
+  a {
+    display: block;
+    text-decoration: none;
+  }
+  line-height: 1.5;
+  color: #221e1f;
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+}

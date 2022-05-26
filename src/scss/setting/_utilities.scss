@@ -1,0 +1,70 @@
+// color
+
+$primary: #56c4c5;
+$serviceBtn: #ff5d50;
+$text-light: #747474;
+$text-dark: #221e1f;
+$divide: #dddddd;
+
+// 字型
+.fw-b {
+  font-weight: 900;
+}
+.text-s {
+  font-size: 18px;
+  line-height: 1.44;
+}
+.text {
+  font-size: 20px;
+}
+.text-m {
+  font-size: 24px;
+  line-height: 1.45;
+}
+.subtitle {
+  font-size: 32px;
+  line-height: 1.43;
+  @media (max-width: 767px) {
+    font-size: 28px;
+    line-height: 1.43;
+  }
+}
+.title {
+  font-size: 48px;
+  line-height: 1.45;
+  @media (max-width: 767px) {
+    font-size: 32px;
+    line-height: 1.44;
+  }
+}
+
+// 距離
+.mb-16 {
+  margin-bottom: 16px;
+}
+
+// 按鈕
+.serviceBtn {
+  color: white;
+  border-radius: 22px;
+  background-color: $serviceBtn;
+  padding: 8px 32px;
+}
+.linkBtn {
+  border-radius: 27px;
+  border: 1px solid $primary;
+}
+
+// 卡片
+.circle-s {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  box-shadow: 0px 2px 10px #00000014;
+}
+.card {
+  border-radius: 12px;
+}
+.card-shadow {
+  box-shadow: 0px 2px 10px #00000014;
+}
