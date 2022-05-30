@@ -1,0 +1,168 @@
+.headerBg {
+  background-color: #f7f9fd;
+  background-size: 100% 470px;
+  aspect-ratio: 1/0.56;
+  border-radius: 0px 0px 0px 300px;
+  position: relative;
+}
+@media (max-width: 767px) {
+  .headerBg {
+    aspect-ratio: 1/1.32;
+  }
+}
+
+.headerPic {
+  background: url("https://raw.githubusercontent.com/debbyyeh/chatTalker/main/dist/image/banner.svg") no-repeat;
+  position: absolute;
+  width: 885px;
+  right: 0;
+  top: 0;
+  aspect-ratio: 1/0.63;
+}
+@media (max-width: 767px) {
+  .headerPic {
+    background: url("https://raw.githubusercontent.com/debbyyeh/chatTalker/main/dist/image/banner_sm.svg") no-repeat right;
+    width: 375px;
+    aspect-ratio: 1/1.32;
+  }
+}
+
+@media (max-width: 767px) {
+  .headerTitle {
+    margin-top: 48px;
+  }
+}
+
+.servcieList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 64px;
+  margin-right: -8px;
+  margin-left: -8px;
+  white-space: nowrap;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  overflow-x: scroll;
+}
+@media (max-width: 767px) {
+  .servcieList {
+    margin-right: -6px;
+    margin-left: -6px;
+    margin-bottom: 32px;
+  }
+}
+
+.serviceItem {
+  margin-right: 8px;
+  margin-left: 8px;
+}
+.serviceItem a {
+  padding: 12px 32px;
+  text-align: center;
+}
+@media (max-width: 767px) {
+  .serviceItem {
+    margin-right: 6px;
+    margin-left: 6px;
+  }
+  .serviceItem a {
+    padding: 8px 16px;
+  }
+}
+
+.servicePlan > li {
+  width: 48%;
+}
+.servicePlan i {
+  margin-right: 12px;
+}
+.servicePlan h4 {
+  margin-top: 10px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #dddddd;
+}
+@media (max-width: 767px) {
+  .servicePlan {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .servicePlan > li {
+    width: 100%;
+  }
+  .servicePlan > li:nth-child(1) {
+    margin-bottom: 24px;
+  }
+}
+
+.serviceBasic,
+.serviceStandard {
+  padding: 32px 25px;
+}
+@media (max-width: 767px) {
+  .serviceBasic,
+.serviceStandard {
+    padding: 24px 16px;
+  }
+}
+
+.memberContent,
+.priceContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+.member,
+.price {
+  padding: 24px 42px;
+  background-color: #f5f5f5;
+  width: 45%;
+}
+@media (max-width: 992px) {
+  .member,
+.price {
+    padding: 16px 20px;
+  }
+}
+
+.memberTitle,
+.priceTitle {
+  font-size: 12px;
+  line-height: 1.42;
+}
+
+.memberPrice,
+.priceSum {
+  font-size: 32px;
+  line-height: 1.1;
+  margin-right: 8px;
+}
+.memberPrice sub,
+.priceSum sub {
+  font-size: 12px;
+  line-height: 0;
+}
+@media (max-width: 767px) {
+  .memberPrice,
+.priceSum {
+    margin-right: 4px;
+    font-size: 28px;
+  }
+}
+
+.QAList a {
+  padding: 16px 32px;
+  color: #221e1f;
+}
+@media (max-width: 767px) {
+  .QAList a {
+    padding: 16px;
+  }
+}

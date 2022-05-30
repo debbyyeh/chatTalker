@@ -1,1 +1,137 @@
 @import '../setting/variable';
+
+.headerBg {
+  background-color: #f7f9fd;
+  background-size: 100% 470px;
+  aspect-ratio: 1/0.56;
+  border-radius: 0px 0px 0px 300px;
+  @media (max-width: 767px) {
+    aspect-ratio: 1/1.32;
+  }
+  position: relative;
+}
+.headerPic {
+  background: url('https://raw.githubusercontent.com/debbyyeh/chatTalker/main/dist/image/banner.svg')
+    no-repeat;
+
+  position: absolute;
+  width: 885px;
+  right: 0;
+  top: 0;
+  aspect-ratio: 1/0.63;
+  @media (max-width: 767px) {
+    background: url('https://raw.githubusercontent.com/debbyyeh/chatTalker/main/dist/image/banner_sm.svg')
+      no-repeat right;
+    width: 375px;
+    aspect-ratio: 1/1.32;
+  }
+}
+.headerTitle {
+  @media (max-width: 767px) {
+    margin-top: 48px;
+  }
+}
+.servcieList {
+  display: flex;
+  margin-bottom: 64px;
+  margin-right: -8px;
+  margin-left: -8px;
+  white-space: nowrap;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+  @media (max-width: 767px) {
+    margin-right: -6px;
+    margin-left: -6px;
+    margin-bottom: 32px;
+  }
+}
+.serviceItem {
+  margin-right: 8px;
+  margin-left: 8px;
+  a {
+    padding: 12px 32px;
+    text-align: center;
+  }
+  @media (max-width: 767px) {
+    margin-right: 6px;
+    margin-left: 6px;
+    a {
+      padding: 8px 16px;
+    }
+  }
+}
+
+// 方案表格內容
+.servicePlan {
+  > li {
+    width: 48%;
+  }
+  i {
+    margin-right: 12px;
+  }
+  h4 {
+    margin-top: 10px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid $divide;
+  }
+  @media (max-width: 767px) {
+    flex-wrap: wrap;
+    > li {
+      width: 100%;
+      &:nth-child(1) {
+        margin-bottom: 24px;
+      }
+    }
+  }
+}
+.serviceBasic,
+.serviceStandard {
+  padding: 32px 25px;
+  @media (max-width: 767px) {
+    padding: 24px 16px;
+  }
+}
+.memberContent,
+.priceContent {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+.member,
+.price {
+  padding: 24px 42px;
+  background-color: $item-bg;
+  width: 45%;
+  @media (max-width: 992px) {
+    padding: 16px 20px;
+  }
+}
+.memberTitle,
+.priceTitle {
+  font-size: 12px;
+  line-height: 1.42;
+}
+.memberPrice,
+.priceSum {
+  font-size: 32px;
+  line-height: 1.1;
+  margin-right: 8px;
+  sub {
+    font-size: 12px;
+    line-height: 0;
+  }
+  @media (max-width: 767px) {
+    margin-right: 4px;
+    font-size: 28px;
+  }
+}
+// 常見問題
+.QAList {
+  a {
+    padding: 16px 32px;
+    color: $text-dark;
+    @media (max-width: 767px) {
+      padding: 16px;
+    }
+  }
+}

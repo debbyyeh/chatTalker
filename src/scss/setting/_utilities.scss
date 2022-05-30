@@ -1,18 +1,31 @@
 // color
 
 $primary: #56c4c5;
-$serviceBtn: #ff5d50;
+$button: #ff5d50;
 $text-light: #747474;
 $text-dark: #221e1f;
 $divide: #dddddd;
+$item-bg: #f5f5f5;
 
+.fas {
+  color: #f5ca52;
+}
 // 字型
 .fw-b {
   font-weight: 900;
 }
+.text-center {
+  text-align: center;
+}
 .text-s {
   font-size: 18px;
   line-height: 1.44;
+}
+.text-mb-s {
+  @media (min-width: 768px) {
+    font-size: 18px;
+    line-height: 1.44;
+  }
 }
 .text {
   font-size: 20px;
@@ -37,34 +50,102 @@ $divide: #dddddd;
     line-height: 1.44;
   }
 }
+.text-primary {
+  color: $primary;
+}
 
 // 距離
+.mb-8 {
+  margin-bottom: 8px;
+}
 .mb-16 {
   margin-bottom: 16px;
+}
+.mb-24 {
+  margin-bottom: 24px;
+}
+.mb-28 {
+  margin-bottom: 28px;
+}
+.mb-32 {
+  margin-bottom: 32px;
+}
+.mb-mb-32 {
+  @media (min-width: 768px) {
+    margin-bottom: 32px;
+  }
+}
+.mb-48 {
+  margin-bottom: 48px;
+}
+.mb-mb-100 {
+  @media (min-width: 768px) {
+    margin-bottom: 100px;
+  }
+}
+.mb-sm-60 {
+  @media (max-width: 767px) {
+    margin-bottom: 60px;
+  }
+}
+.px-20 {
+  padding-right: 20px;
+  padding-left: 20px;
 }
 
 // 按鈕
 .serviceBtn {
+  width: 136px;
   color: white;
   border-radius: 22px;
-  background-color: $serviceBtn;
+  background-color: $button;
   padding: 8px 32px;
 }
 .linkBtn {
   border-radius: 27px;
   border: 1px solid $primary;
 }
+.btn-primary {
+  background-color: $primary;
+}
 
 // 卡片
-.circle-s {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  box-shadow: 0px 2px 10px #00000014;
-}
 .card {
   border-radius: 12px;
 }
+.picCard {
+  border-radius: 12px 12px 0px 0px;
+}
 .card-shadow {
   box-shadow: 0px 2px 10px #00000014;
+}
+
+// 排版
+.d-flex {
+  display: flex;
+}
+.flex-lg-wrap {
+  @media (max-width: 992px) {
+    flex-wrap: wrap;
+  }
+}
+.flex-mb-wrap {
+  @media (max-width: 767px) {
+    flex-wrap: wrap;
+  }
+}
+.jcc {
+  justify-content: center;
+}
+.jcsb {
+  justify-content: space-between;
+}
+.jcse {
+  justify-content: space-evenly;
+}
+.alc {
+  align-items: center;
+}
+.mx-auto {
+  margin: 0 auto;
 }
