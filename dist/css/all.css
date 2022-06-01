@@ -314,6 +314,24 @@ body *::after {
   }
 }
 
+.d-sm-none {
+  display: block;
+}
+@media (max-width: 768px) {
+  .d-sm-none {
+    display: none;
+  }
+}
+
+.d-sm-block {
+  display: block;
+}
+@media (min-width: 767px) {
+  .d-sm-block {
+    display: none;
+  }
+}
+
 .jcc {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -366,9 +384,52 @@ body *::after {
   }
 }
 
+.mainVisual {
+  height: 100vh;
+  background: url("https://raw.githubusercontent.com/debbyyeh/chatTalker/main/dist/image/bg_home.svg") no-repeat;
+  background-position: right top;
+  background-size: 70% auto;
+  position: relative;
+}
+@media (max-width: 992px) {
+  .mainVisual {
+    height: 100%;
+  }
+}
+@media (max-width: 767px) {
+  .mainVisual {
+    height: 100vh;
+    background: none;
+  }
+}
+
+.indexBall {
+  position: absolute;
+  background: url("https://raw.githubusercontent.com/debbyyeh/chatTalker/main/dist/image/ball01.svg") no-repeat;
+  width: 138px;
+  aspect-ratio: 1/2.65;
+  top: calc(100vh - 180px);
+  background-position: right;
+}
+@media (max-width: 992px) {
+  .indexBall {
+    top: calc(100% - 220px);
+    z-index: -1;
+  }
+}
+@media (max-width: 767px) {
+  .indexBall {
+    top: 100vh;
+    width: 49px;
+  }
+}
+
 .header {
-  padding: 24px 0;
   margin-bottom: 30px;
+}
+.header h1 {
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 @media (max-width: 767px) {
   .header {
@@ -377,22 +438,55 @@ body *::after {
 }
 
 .headerDivide {
-  display: none;
+  border-bottom: 1px solid #ffd153;
+  margin-bottom: 32px;
+}
+
+.banner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 @media (max-width: 767px) {
-  .headerDivide {
-    display: block;
-    border-bottom: 1px solid #ffd153;
-    margin-bottom: 32px;
+  .banner {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.bannerText {
+  width: 42%;
+}
+@media (max-width: 767px) {
+  .bannerText {
+    width: 100%;
   }
 }
 
 .bannerPic {
-  width: 532px;
+  width: 55%;
 }
 .bannerPic img {
   width: 100%;
   aspect-ratio: 1/1;
+}
+@media (max-width: 767px) {
+  .bannerPic {
+    width: 100%;
+    background: url("https://raw.githubusercontent.com/debbyyeh/chatTalker/main/dist/image/bg_home_sm.svg") no-repeat;
+    background-size: contain;
+    background-position: bottom;
+  }
 }
 
 .socialLict {
@@ -446,6 +540,26 @@ body *::after {
   }
 }
 
+.highlights {
+  position: relative;
+}
+
+.middleBall {
+  background: url("https://raw.githubusercontent.com/debbyyeh/chatTalker/main/dist/image/ball02.svg") no-repeat;
+  width: 210px;
+  height: 320px;
+  position: absolute;
+  right: 0;
+  top: calc(100% - 120px);
+  z-index: -1;
+}
+@media (max-width: 767px) {
+  .middleBall {
+    width: 88px;
+    height: 135px;
+  }
+}
+
 .contentList {
   margin-right: -8px;
   margin-left: -8px;
@@ -459,15 +573,15 @@ body *::after {
 
 .contentItem {
   width: 25%;
-  padding-left: 8px;
-  padding-right: 8px;
+  margin-left: 8px;
+  margin-right: 8px;
   text-align: center;
 }
 @media (max-width: 992px) {
   .contentItem {
-    width: 50%;
-    padding-left: 4px;
-    padding-right: 4px;
+    width: 48%;
+    margin-left: 4px;
+    margin-right: 4px;
   }
 }
 @media (max-width: 767px) {
@@ -527,7 +641,7 @@ body *::after {
 @media (max-width: 767px) {
   .servicePoint {
     margin: 0 auto;
-    width: 80%;
+    width: 100%;
   }
   .servicePoint:nth-child(-n+3) {
     margin-bottom: 24px;
@@ -569,11 +683,11 @@ body *::after {
   }
 }
 
-.comment-layout {
+.comment h3 {
   margin-bottom: 104px;
 }
 @media (max-width: 767px) {
-  .comment-layout {
+  .comment h3 {
     margin-bottom: 88px;
   }
 }
@@ -586,7 +700,7 @@ body *::after {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-@media (max-width: 992px) {
+@media (max-width: 768px) {
   .commentList {
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
@@ -596,7 +710,7 @@ body *::after {
 }
 
 .commentItem {
-  width: 32.5%;
+  width: 32%;
   padding: 48px 32px 24px 32px;
   position: relative;
 }
@@ -612,6 +726,16 @@ body *::after {
     margin-right: 2px;
     margin-left: 2px;
   }
+}
+
+.commentBall {
+  position: absolute;
+  background: url("https://raw.githubusercontent.com/debbyyeh/chatTalker/main/dist/image/ball03.svg") no-repeat;
+  width: 153px;
+  aspect-ratio: 1/1;
+  top: -115px;
+  left: -70px;
+  z-index: -1;
 }
 
 .commentPic {
@@ -641,16 +765,29 @@ body *::after {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+.footer h3 {
+  font-size: 32px;
+  line-height: 1.44;
+  margin-bottom: 48px;
+}
+@media (max-width: 767px) {
+  .footer {
+    background: url("https://raw.githubusercontent.com/debbyyeh/chatTalker/main/dist/image/footer_sm.svg") no-repeat center;
+    background-size: cover;
+    aspect-ratio: 1/1.23;
+  }
+  .footer h3 {
+    font-size: 24px;
+    line-height: 1.45;
+    margin-bottom: 24px;
+  }
 }
 
 .right {
@@ -660,37 +797,48 @@ body *::after {
 
 .headerBg {
   background-color: #f7f9fd;
-  background-size: 100% 470px;
-  aspect-ratio: 1/0.56;
+  aspect-ratio: 1/0.37;
   border-radius: 0px 0px 0px 300px;
   position: relative;
 }
 @media (max-width: 767px) {
   .headerBg {
     aspect-ratio: 1/1.32;
+    border-radius: 0px 0px 0px 150px;
   }
 }
 
 .headerPic {
-  background: url("https://raw.githubusercontent.com/debbyyeh/chatTalker/main/dist/image/banner.svg") no-repeat;
+  background: url("https://raw.githubusercontent.com/debbyyeh/chatTalker/main/dist/image/banner.svg") no-repeat center;
   position: absolute;
-  width: 885px;
-  right: 0;
-  top: 0;
+  width: 70%;
   aspect-ratio: 1/0.63;
+  right: 0;
+  bottom: -15%;
+  background-size: cover;
 }
 @media (max-width: 767px) {
   .headerPic {
-    background: url("https://raw.githubusercontent.com/debbyyeh/chatTalker/main/dist/image/banner_sm.svg") no-repeat right;
-    width: 375px;
+    background: url("https://raw.githubusercontent.com/debbyyeh/chatTalker/main/dist/image/banner_sm.svg") no-repeat center;
+    width: 100%;
+    bottom: 0;
+    background-size: cover;
     aspect-ratio: 1/1.32;
   }
 }
 
 @media (max-width: 767px) {
   .headerTitle {
-    margin-top: 48px;
+    position: absolute;
+    z-index: 3;
   }
+  .headerTitle h2 {
+    padding-top: 48px;
+  }
+}
+
+.headerDivide {
+  margin-bottom: 0;
 }
 
 .servcieList {
@@ -716,10 +864,15 @@ body *::after {
 .serviceItem {
   margin-right: 8px;
   margin-left: 8px;
+  border-radius: 27px;
 }
 .serviceItem a {
   padding: 12px 32px;
   text-align: center;
+}
+.serviceItem a.active {
+  background-color: #56c4c5;
+  color: white;
 }
 @media (max-width: 767px) {
   .serviceItem {
@@ -817,12 +970,45 @@ body *::after {
   }
 }
 
-.QAList a {
+.QAList {
   padding: 16px 32px;
   color: #221e1f;
+  cursor: pointer;
+}
+.QAList:hover {
+  background-color: #f5f5f5;
 }
 @media (max-width: 767px) {
-  .QAList a {
+  .QAList {
     padding: 16px;
   }
+}
+
+.QATitle.active {
+  font-weight: bold;
+  color: #56c4c5;
+}
+
+.fa-plus.active {
+  display: none;
+}
+
+.fa-minus {
+  display: none;
+}
+.fa-minus.active {
+  display: block;
+}
+
+.QAcontent {
+  display: none;
+  margin-top: 24px;
+}
+
+.d-block {
+  display: block;
+}
+
+.d-none {
+  display: none;
 }

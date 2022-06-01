@@ -1,0 +1,1 @@
+$(document).ready((function(){$("QAList li").click((function(t){t.preventDefault(),$("QAList p").toggle("active")}))}));

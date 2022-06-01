@@ -2,34 +2,43 @@
 
 .headerBg {
   background-color: #f7f9fd;
-  background-size: 100% 470px;
-  aspect-ratio: 1/0.56;
+  aspect-ratio: 1/0.37;
   border-radius: 0px 0px 0px 300px;
+  position: relative;
   @media (max-width: 767px) {
     aspect-ratio: 1/1.32;
+    border-radius: 0px 0px 0px 150px;
   }
-  position: relative;
 }
 .headerPic {
   background: url('https://raw.githubusercontent.com/debbyyeh/chatTalker/main/dist/image/banner.svg')
-    no-repeat;
-
+    no-repeat center;
   position: absolute;
-  width: 885px;
-  right: 0;
-  top: 0;
+  width: 70%;
   aspect-ratio: 1/0.63;
+  right: 0;
+  bottom: -15%;
+  background-size: cover;
   @media (max-width: 767px) {
     background: url('https://raw.githubusercontent.com/debbyyeh/chatTalker/main/dist/image/banner_sm.svg')
-      no-repeat right;
-    width: 375px;
+      no-repeat center;
+    width: 100%;
+    bottom: 0;
+    background-size: cover;
     aspect-ratio: 1/1.32;
   }
 }
 .headerTitle {
   @media (max-width: 767px) {
-    margin-top: 48px;
+    position: absolute;
+    z-index: 3;
+    h2 {
+      padding-top: 48px;
+    }
   }
+}
+.headerDivide {
+  margin-bottom: 0;
 }
 .servcieList {
   display: flex;
@@ -48,9 +57,14 @@
 .serviceItem {
   margin-right: 8px;
   margin-left: 8px;
+  border-radius: 27px;
   a {
     padding: 12px 32px;
     text-align: center;
+    &.active {
+      background-color: $primary;
+      color: white;
+    }
   }
   @media (max-width: 767px) {
     margin-right: 6px;
@@ -127,11 +141,44 @@
 }
 // 常見問題
 .QAList {
-  a {
-    padding: 16px 32px;
-    color: $text-dark;
-    @media (max-width: 767px) {
-      padding: 16px;
-    }
+  padding: 16px 32px;
+  color: $text-dark;
+  cursor: pointer;
+  &:hover {
+    background-color: #f5f5f5;
   }
+  @media (max-width: 767px) {
+    padding: 16px;
+  }
+}
+// 點選之後標題變色
+.QATitle {
+  &.active {
+    font-weight: bold;
+    color: $primary;
+  }
+}
+// 點選之後符號改變
+.fa-plus {
+  &.active {
+    display: none;
+  }
+}
+.fa-minus {
+  display: none;
+  &.active {
+    display: block;
+  }
+}
+// 點選之後下方內容出現
+.QAcontent {
+  display: none;
+  margin-top: 24px;
+  // transition: all 0.2s;
+}
+.d-block {
+  display: block;
+}
+.d-none {
+  display: none;
 }

@@ -14,29 +14,79 @@
     width: 130px;
   }
 }
-// .mainVisual {
-//     height: 100vh;
-// }
+.mainVisual {
+  height: 100vh;
+  background: url('https://raw.githubusercontent.com/debbyyeh/chatTalker/main/dist/image/bg_home.svg')
+    no-repeat;
+  background-position: right top;
+  background-size: 70% auto;
+  position: relative;
+  @media (max-width: 992px) {
+    height: 100%;
+  }
+  @media (max-width: 767px) {
+    height: 100vh;
+    background: none;
+  }
+}
+.indexBall {
+  position: absolute;
+  background: url('https://raw.githubusercontent.com/debbyyeh/chatTalker/main/dist/image/ball01.svg')
+    no-repeat;
+  width: 138px;
+  aspect-ratio: 1/2.65;
+  top: calc(100vh - 180px);
+  background-position: right;
+  @media (max-width: 992px) {
+    top: calc(100% - 220px);
+    z-index: -1;
+  }
+  @media (max-width: 767px) {
+    top: 100vh;
+    width: 49px;
+  }
+}
 .header {
-  padding: 24px 0;
   margin-bottom: 30px;
+  h1 {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
   @media (max-width: 767px) {
     margin-bottom: 0;
   }
 }
 .headerDivide {
-  display: none;
+  border-bottom: 1px solid #ffd153;
+  margin-bottom: 32px;
+}
+.banner {
+  display: flex;
+  justify-content: space-between;
   @media (max-width: 767px) {
-    display: block;
-    border-bottom: 1px solid #ffd153;
-    margin-bottom: 32px;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.bannerText {
+  width: 42%;
+  @media (max-width: 767px) {
+    width: 100%;
   }
 }
 .bannerPic {
-  width: 532px;
+  width: 55%;
   img {
     width: 100%;
     aspect-ratio: 1/1;
+  }
+  @media (max-width: 767px) {
+    width: 100%;
+    background: url('https://raw.githubusercontent.com/debbyyeh/chatTalker/main/dist/image/bg_home_sm.svg')
+      no-repeat;
+    background-size: contain;
+    background-position: bottom;
   }
 }
 .socialLict {
@@ -72,6 +122,23 @@
     font-size: 22px;
   }
 }
+.highlights {
+  position: relative;
+}
+.middleBall {
+  background: url('https://raw.githubusercontent.com/debbyyeh/chatTalker/main/dist/image/ball02.svg')
+    no-repeat;
+  width: 210px;
+  height: 320px;
+  position: absolute;
+  right: 0;
+  top: calc(100% - 120px);
+  z-index: -1;
+  @media (max-width: 767px) {
+    width: 88px;
+    height: 135px;
+  }
+}
 .contentList {
   margin-right: -8px;
   margin-left: -8px;
@@ -82,13 +149,13 @@
 }
 .contentItem {
   width: 25%;
-  padding-left: 8px;
-  padding-right: 8px;
+  margin-left: 8px;
+  margin-right: 8px;
   text-align: center;
   @media (max-width: 992px) {
-    width: 50%;
-    padding-left: 4px;
-    padding-right: 4px;
+    width: 48%;
+    margin-left: 4px;
+    margin-right: 4px;
   }
   @media (max-width: 767px) {
     width: 100%;
@@ -131,7 +198,7 @@
   padding-bottom: 48px;
   @media (max-width: 767px) {
     margin: 0 auto;
-    width: 80%;
+    width: 100%;
     &:nth-child(-n + 3) {
       margin-bottom: 24px;
     }
@@ -161,24 +228,27 @@
     }
   }
 }
-.comment-layout {
-  margin-bottom: 104px;
-  @media (max-width: 767px) {
-    margin-bottom: 88px;
+.comment {
+  // position: relative;
+  h3 {
+    margin-bottom: 104px;
+    @media (max-width: 767px) {
+      margin-bottom: 88px;
+    }
   }
 }
 .commentList {
   display: flex;
   justify-content: space-between;
 
-  @media (max-width: 992px) {
+  @media (max-width: 768px) {
     flex-wrap: nowrap;
     overflow-x: scroll;
     white-space: nowrap;
   }
 }
 .commentItem {
-  width: 32.5%;
+  width: 32%;
   padding: 48px 32px 24px 32px;
   position: relative;
   i {
@@ -192,6 +262,16 @@
       margin-left: 2px;
     }
   }
+}
+.commentBall {
+  position: absolute;
+  background: url('https://raw.githubusercontent.com/debbyyeh/chatTalker/main/dist/image/ball03.svg')
+    no-repeat;
+  width: 153px;
+  aspect-ratio: 1/1;
+  top: -115px;
+  left: -70px;
+  z-index: -1;
 }
 .commentPic {
   position: absolute;
@@ -216,9 +296,24 @@
   background-size: cover;
   aspect-ratio: 1/0.5;
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
+  h3 {
+    font-size: 32px;
+    line-height: 1.44;
+    margin-bottom: 48px;
+  }
+  @media (max-width: 767px) {
+    background: url('https://raw.githubusercontent.com/debbyyeh/chatTalker/main/dist/image/footer_sm.svg')
+      no-repeat center;
+    background-size: cover;
+    aspect-ratio: 1/1.23;
+    h3 {
+      font-size: 24px;
+      line-height: 1.45;
+      margin-bottom: 24px;
+    }
+  }
 }
 .right {
   padding: 16px;

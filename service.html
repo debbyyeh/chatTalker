@@ -19,18 +19,28 @@
     <title>chatTalker-計費方式</title>
   </head>
   <body>
+    <!-- 手機板header -->
+    <div class="header container mx-auto d-sm-block">
+      <div class="d-flex jcsb alc">
+        <h1><a href="index.html" class="logo">chatTalker</a></h1>
+        <a href="service.html" class="serviceBtn">方案費用</a>
+      </div>
+    </div>
+    <div class="headerDivide d-sm-block"></div>
+    <!-- 電腦板header -->
     <div class="headerBg mb-mb-100 mb-sm-60">
-      <div class="container mx-auto">
+      <div class="headerPic"></div>
+      <div class="container mx-auto d-sm-none">
         <div class="header d-flex jcsb alc">
           <h1><a href="index.html" class="logo">chatTalker</a></h1>
           <a href="service.html" class="serviceBtn">方案費用</a>
         </div>
-        <div class="headerDivide container-fluid"></div>
+      </div>
+      <div class="container mx-auto">
         <div class="headerTitle">
           <h2 class="title mb-16 d-flex alc fw-b">計費方式說明</h2>
           <p>聊天機器人幫你實現增粉、轉單、客服等目標</p>
         </div>
-        <div class="headerPic"></div>
       </div>
     </div>
     <div class="container mx-auto">
@@ -39,20 +49,30 @@
           彈性選擇，提供您選擇最適合的方案
         </h3>
         <ul class="servcieList d-flex jcc">
-          <li class="linkBtn serviceItem">
-            <a href="" class="text-mb-s text-primary">10000位</a>
+          <li class="serviceItem">
+            <a href="#" class="linkBtn member10000 text-mb-s text-primary">
+              10000位
+            </a>
           </li>
-          <li class="linkBtn serviceItem">
-            <a href="" class="text-mb-s text-primary">15000位</a>
+          <li class="serviceItem">
+            <a href="" class="linkBtn member15000 text-mb-s text-primary">
+              15000位
+            </a>
           </li>
-          <li class="linkBtn serviceItem">
-            <a href="" class="text-mb-s text-primary">20000位</a>
+          <li class="serviceItem">
+            <a href="" class="linkBtn member20000 text-mb-s text-primary">
+              20000位
+            </a>
           </li>
-          <li class="linkBtn serviceItem">
-            <a href="" class="text-mb-s text-primary">25000位</a>
+          <li class="serviceItem">
+            <a href="" class="linkBtn member25000 text-mb-s text-primary">
+              25000位
+            </a>
           </li>
-          <li class="linkBtn serviceItem">
-            <a href="" class="text-mb-s text-primary">>25000位</a>
+          <li class="serviceItem">
+            <a href="" class="linkBtn memberUp25000 text-mb-s text-primary">
+              >25000位
+            </a>
           </li>
         </ul>
         <div class="serviceContent">
@@ -162,30 +182,42 @@
       </div>
       <div class="QA mb-mb-100 mb-sm-60">
         <h3 class="subtitle fw-b text-center mb-48">常見問題</h3>
-        <ul class="QAList">
-          <li class="card card-shadow mb-16">
-            <a href="">
-              <div class="d-flex jcsb">
-                <p class="text-mb-s">我要怎麼變更方案？</p>
-                <i class="fa-solid fa-plus text-primary"></i>
-              </div>
-            </a>
+        <ul>
+          <li class="QAList card card-shadow mb-16">
+            <div class="d-flex jcsb">
+              <p class="QATitle text-mb-s">我要怎麼變更方案？</p>
+              <i class="fa-solid fa-plus text-primary"></i>
+              <i class="fa-solid fa-minus text-primary"></i>
+            </div>
+            <p class="QAcontent">
+              當然哦！我們錢都收了，不會拋棄你的！
+              <br />
+              請您直接來我們公司，我們假日也都在辦公室。
+            </p>
           </li>
-          <li class="card card-shadow mb-16">
-            <a href="">
-              <div class="d-flex jcsb">
-                <p class="text-mb-s">如果我沒有LINE官方帳號怎麼辦？</p>
-                <i class="fa-solid fa-plus text-primary"></i>
-              </div>
-            </a>
+          <li class="QAList card card-shadow mb-16">
+            <div class="d-flex jcsb">
+              <p class="QATitle text-mb-s">如果我沒有LINE官方帳號怎麼辦？</p>
+              <i class="fa-solid fa-plus text-primary"></i>
+              <i class="fa-solid fa-minus text-primary"></i>
+            </div>
+            <p class="QAcontent">
+              當然哦！我們錢都收了，不會拋棄你的！
+              <br />
+              請您直接來我們公司，我們假日也都在辦公室。
+            </p>
           </li>
-          <li class="card card-shadow mb-16">
-            <a href="">
-              <div class="d-flex jcsb">
-                <p class="text-mb-s">非上班日有客服支援嗎？</p>
-                <i class="fa-solid fa-plus text-primary"></i>
-              </div>
-            </a>
+          <li class="QAList card card-shadow mb-16">
+            <div class="d-flex jcsb">
+              <p class="QATitle text-mb-s">非上班日有客服支援嗎？</p>
+              <i class="fa-solid fa-plus text-primary"></i>
+              <i class="fa-solid fa-minus text-primary"></i>
+            </div>
+            <p class="QAcontent">
+              當然哦！我們錢都收了，不會拋棄你的！
+              <br />
+              請您直接來我們公司，我們假日也都在辦公室。
+            </p>
           </li>
         </ul>
       </div>
@@ -193,5 +225,12 @@
     <div class="right">
       <p class="text-center">© 2022 chatTalker. All Rights Reserved.</p>
     </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./dist/all.js"></script>
   </body>
 </html>

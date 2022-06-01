@@ -1,36 +1,47 @@
 .headerBg {
   background-color: #f7f9fd;
-  background-size: 100% 470px;
-  aspect-ratio: 1/0.56;
+  aspect-ratio: 1/0.37;
   border-radius: 0px 0px 0px 300px;
   position: relative;
 }
 @media (max-width: 767px) {
   .headerBg {
     aspect-ratio: 1/1.32;
+    border-radius: 0px 0px 0px 150px;
   }
 }
 
 .headerPic {
-  background: url("https://raw.githubusercontent.com/debbyyeh/chatTalker/main/dist/image/banner.svg") no-repeat;
+  background: url("https://raw.githubusercontent.com/debbyyeh/chatTalker/main/dist/image/banner.svg") no-repeat center;
   position: absolute;
-  width: 885px;
-  right: 0;
-  top: 0;
+  width: 70%;
   aspect-ratio: 1/0.63;
+  right: 0;
+  bottom: -15%;
+  background-size: cover;
 }
 @media (max-width: 767px) {
   .headerPic {
-    background: url("https://raw.githubusercontent.com/debbyyeh/chatTalker/main/dist/image/banner_sm.svg") no-repeat right;
-    width: 375px;
+    background: url("https://raw.githubusercontent.com/debbyyeh/chatTalker/main/dist/image/banner_sm.svg") no-repeat center;
+    width: 100%;
+    bottom: 0;
+    background-size: cover;
     aspect-ratio: 1/1.32;
   }
 }
 
 @media (max-width: 767px) {
   .headerTitle {
-    margin-top: 48px;
+    position: absolute;
+    z-index: 3;
   }
+  .headerTitle h2 {
+    padding-top: 48px;
+  }
+}
+
+.headerDivide {
+  margin-bottom: 0;
 }
 
 .servcieList {
@@ -56,10 +67,15 @@
 .serviceItem {
   margin-right: 8px;
   margin-left: 8px;
+  border-radius: 27px;
 }
 .serviceItem a {
   padding: 12px 32px;
   text-align: center;
+}
+.serviceItem a.active {
+  background-color: #56c4c5;
+  color: white;
 }
 @media (max-width: 767px) {
   .serviceItem {
@@ -157,12 +173,45 @@
   }
 }
 
-.QAList a {
+.QAList {
   padding: 16px 32px;
   color: #221e1f;
+  cursor: pointer;
+}
+.QAList:hover {
+  background-color: #f5f5f5;
 }
 @media (max-width: 767px) {
-  .QAList a {
+  .QAList {
     padding: 16px;
   }
+}
+
+.QATitle.active {
+  font-weight: bold;
+  color: #56c4c5;
+}
+
+.fa-plus.active {
+  display: none;
+}
+
+.fa-minus {
+  display: none;
+}
+.fa-minus.active {
+  display: block;
+}
+
+.QAcontent {
+  display: none;
+  margin-top: 24px;
+}
+
+.d-block {
+  display: block;
+}
+
+.d-none {
+  display: none;
 }
