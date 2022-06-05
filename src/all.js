@@ -12,10 +12,13 @@ $(document).ready(function () {
   })
   $('.QAList').click(function (e) {
     e.preventDefault(e)
-    $(this).find('.fa-plus').toggleClass('d-none')
-    $(this).find('.fa-minus').toggleClass('d-block')
+    if ($(this).hasClass('active')) {
+      $(this).removeClass('active')
+    } else {
+      $(this).addClass('active').siblings().removeClass('active')
+    }
   })
-  $('.serviceItem a').click(function (e) {
+  $('.choiceItem a').click(function (e) {
     e.preventDefault()
     $(this).toggleClass('active')
     $(this).parent().siblings().find('a').removeClass('active')
@@ -39,5 +42,35 @@ $(document).ready(function () {
   $('.memberUp25000').click(function (e) {
     e.preventDefault()
     $('.memberPrice').text('>25000')
+  })
+  $('.scrollBtn').click(function (e) {
+    e.preventDefault()
+    $('html, body').animate(
+      {
+        scrollTop: 0,
+      },
+      1000,
+    )
+  })
+
+  // swiper
+  var swiper = new Swiper('.mySwiper', {
+    slidesPerView: '1',
+    centeredSlides: true,
+    spaceBetween: 16,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 16,
+      },
+      992: {
+        slidesPerView: 3,
+        spaceBetween: 16,
+      },
+    },
   })
 })

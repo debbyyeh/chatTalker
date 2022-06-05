@@ -25,7 +25,6 @@
     height: 100%;
   }
   @media (max-width: 767px) {
-    height: 100vh;
     background: none;
   }
 }
@@ -42,8 +41,7 @@
     z-index: -1;
   }
   @media (max-width: 767px) {
-    top: 100vh;
-    width: 49px;
+    display: none;
   }
 }
 .header {
@@ -56,7 +54,7 @@
     margin-bottom: 0;
   }
 }
-.headerDivide {
+.headerDivideIndex {
   border-bottom: 1px solid #ffd153;
   margin-bottom: 32px;
 }
@@ -87,6 +85,22 @@
       no-repeat;
     background-size: contain;
     background-position: bottom;
+  }
+}
+.social {
+  position: relative;
+  @media (max-width: 767px) {
+    &::before {
+      content: '';
+      width: 126px;
+      height: 126px;
+      background-color: $primary;
+      border-radius: 50%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      transform: translateX(-77px);
+    }
   }
 }
 .socialLict {
@@ -124,57 +138,73 @@
 }
 .highlights {
   position: relative;
-}
-.middleBall {
-  background: url('https://raw.githubusercontent.com/debbyyeh/chatTalker/main/dist/image/ball02.svg')
-    no-repeat;
-  width: 210px;
-  height: 320px;
-  position: absolute;
-  right: 0;
-  top: calc(100% - 120px);
-  z-index: -1;
   @media (max-width: 767px) {
-    width: 88px;
-    height: 135px;
+    overflow: hidden;
+    &::before {
+      content: '';
+      position: absolute;
+      width: 131px;
+      height: 131px;
+      background-color: #b8e6e7;
+      border-radius: 50%;
+      transform: translateX(43px);
+      bottom: 0;
+      right: 0;
+      z-index: -1;
+    }
+  }
+  .highlightsBall {
+    position: absolute;
+    background: url('https://raw.githubusercontent.com/debbyyeh/chatTalker/main/dist/image/ball02.svg')
+      no-repeat;
+    aspect-ratio: 1/1.48;
+    width: 220px;
+    background-position: left;
+    right: 0;
+    top: calc(100% - 120px);
+    z-index: -1;
   }
 }
-.contentList {
+.highlightList {
   margin-right: -8px;
   margin-left: -8px;
-  @media (max-width: 992px) {
-    margin-right: -4px;
-    margin-left: -4px;
-  }
-}
-.contentItem {
-  width: 25%;
-  margin-left: 8px;
-  margin-right: 8px;
-  text-align: center;
-  @media (max-width: 992px) {
-    width: 48%;
-    margin-left: 4px;
-    margin-right: 4px;
-  }
+  flex-wrap: wrap;
   @media (max-width: 767px) {
-    width: 100%;
-    padding: 0;
-    &:nth-child(-n + 3) {
-      margin-bottom: 24px;
+    padding: 0 30px;
+  }
+  li {
+    width: 23%;
+    margin-right: 8px;
+    margin-left: 8px;
+    background-color: white;
+    @media (max-width: 992px) {
+      width: 48%;
+      margin-right: 4px;
+      margin-left: 4px;
+      &:nth-child(-n + 2) {
+        margin-bottom: 24px;
+      }
+    }
+    @media (max-width: 767px) {
+      width: 100%;
+      margin-right: 0;
+      margin-left: 0;
+      &:nth-child(-n + 3) {
+        margin-bottom: 24px;
+      }
     }
   }
 }
-.content {
-  padding: 0 16px 24px 16px;
-}
-.contentPic {
+.highlightsPic {
+  border-radius: 12px 12px 0 0;
   img {
+    border-radius: 12px 12px 0 0;
     width: 100%;
     aspect-ratio: 1/1;
-    object-fit: cover;
-    border-radius: 12px 12px 0 0;
   }
+}
+.highlightContent {
+  padding: 16px 16px 24px 16px;
 }
 .service {
   @media (max-width: 767px) {
@@ -190,6 +220,7 @@
   }
   @media (max-width: 767px) {
     width: 100%;
+    padding: 0 50px;
   }
 }
 .servicePoint {
@@ -228,50 +259,73 @@
     }
   }
 }
-.comment {
-  // position: relative;
-  h3 {
-    margin-bottom: 104px;
-    @media (max-width: 767px) {
-      margin-bottom: 88px;
-    }
-  }
-}
-.commentList {
-  display: flex;
-  justify-content: space-between;
 
-  @media (max-width: 768px) {
-    flex-wrap: nowrap;
-    overflow-x: scroll;
-    white-space: nowrap;
-  }
+// swiper
+html,
+body {
+  position: relative;
+  height: 100%;
+  // overflow-x: hidden;
 }
+.swiper {
+  width: 100%;
+  height: calc(100% + 24px);
+}
+.swiper-slide {
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide {
+  width: 60%;
+}
+.swiper-pagination {
+  position: initial;
+  margin-top: 24px;
+}
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 0 4px;
+  transition: all 0.4s;
+  background-color: #dddddd;
+}
+.swiper-pagination-bullet-active {
+  width: 16px;
+  background-color: #ffd153;
+}
+
 .commentItem {
-  width: 32%;
   padding: 48px 32px 24px 32px;
   position: relative;
+  background-color: white;
+  margin-top: 104px;
   i {
     margin-right: 4px;
     margin-left: 4px;
   }
   @media (max-width: 992px) {
-    width: 100%;
     i {
       margin-right: 2px;
       margin-left: 2px;
     }
   }
-}
-.commentBall {
-  position: absolute;
-  background: url('https://raw.githubusercontent.com/debbyyeh/chatTalker/main/dist/image/ball03.svg')
-    no-repeat;
-  width: 153px;
-  aspect-ratio: 1/1;
-  top: -115px;
-  left: -70px;
-  z-index: -1;
+  @media (max-width: 768px) {
+    padding: 48px 16px 16px 16px;
+    margin-top: 88px;
+  }
 }
 .commentPic {
   position: absolute;
@@ -286,6 +340,17 @@
     aspect-ratio: 1/1;
   }
 }
+.commentBall {
+  position: absolute;
+  background-color: #fbe8b1;
+  border-radius: 50%;
+  width: 153px;
+  aspect-ratio: 1/1;
+  top: 46px;
+  left: -70px;
+  z-index: -1;
+}
+
 .divide {
   height: 1px;
   background-color: $divide;
@@ -307,7 +372,7 @@
     background: url('https://raw.githubusercontent.com/debbyyeh/chatTalker/main/dist/image/footer_sm.svg')
       no-repeat center;
     background-size: cover;
-    aspect-ratio: 1/1.23;
+    aspect-ratio: 1/0.7;
     h3 {
       font-size: 24px;
       line-height: 1.45;
@@ -318,4 +383,19 @@
 .right {
   padding: 16px;
   background-color: #f5f5f5;
+}
+.backTop {
+  position: fixed;
+  z-index: 3;
+  top: auto;
+  right: 24px;
+  bottom: 10%;
+}
+.scrollBtn {
+  border-radius: 50%;
+  background-color: $primary;
+  color: white;
+  width: 71px;
+  height: 71px;
+  padding: 25px 0;
 }

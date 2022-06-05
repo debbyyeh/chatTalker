@@ -1,5 +1,18 @@
 @import '../setting/variable';
 
+.logo {
+  background: url('https://raw.githubusercontent.com/debbyyeh/chatTalker/main/dist/image/logo.png')
+    no-repeat center;
+  background-size: cover;
+  white-space: nowrap;
+  text-indent: 101%;
+  overflow: hidden;
+  width: 220px;
+  aspect-ratio: 1/0.18;
+  @media (max-width: 767px) {
+    width: 130px;
+  }
+}
 .headerBg {
   background-color: #f7f9fd;
   aspect-ratio: 1/0.37;
@@ -37,24 +50,37 @@
     }
   }
 }
+.header {
+  margin-bottom: 30px;
+  h1 {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+  @media (max-width: 767px) {
+    margin-bottom: 0;
+  }
+}
 .headerDivide {
+  border-bottom: 1px solid #ffd153;
   margin-bottom: 0;
 }
-.servcieList {
+.choiceList {
   display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  overflow-x: scroll;
   margin-bottom: 64px;
   margin-right: -8px;
   margin-left: -8px;
-  white-space: nowrap;
-  flex-wrap: nowrap;
-  overflow-x: scroll;
   @media (max-width: 767px) {
+    justify-content: start;
     margin-right: -6px;
     margin-left: -6px;
     margin-bottom: 32px;
   }
 }
-.serviceItem {
+.choiceItem {
   margin-right: 8px;
   margin-left: 8px;
   border-radius: 27px;
@@ -150,6 +176,18 @@
   @media (max-width: 767px) {
     padding: 16px;
   }
+  // 點選之後符號改變
+  &.active {
+    .fa-minus {
+      display: block;
+    }
+    .fa-plus {
+      display: none;
+    }
+  }
+}
+.fa-minus {
+  display: none;
 }
 // 點選之後標題變色
 .QATitle {
@@ -158,18 +196,7 @@
     color: $primary;
   }
 }
-// 點選之後符號改變
-.fa-plus {
-  &.active {
-    display: none;
-  }
-}
-.fa-minus {
-  display: none;
-  &.active {
-    display: block;
-  }
-}
+
 // 點選之後下方內容出現
 .QAcontent {
   display: none;

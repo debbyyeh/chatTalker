@@ -1,3 +1,18 @@
+.logo {
+  background: url("https://raw.githubusercontent.com/debbyyeh/chatTalker/main/dist/image/logo.png") no-repeat center;
+  background-size: cover;
+  white-space: nowrap;
+  text-indent: 101%;
+  overflow: hidden;
+  width: 220px;
+  aspect-ratio: 1/0.18;
+}
+@media (max-width: 767px) {
+  .logo {
+    width: 130px;
+  }
+}
+
 .headerBg {
   background-color: #f7f9fd;
   aspect-ratio: 1/0.37;
@@ -40,49 +55,69 @@
   }
 }
 
+.header {
+  margin-bottom: 30px;
+}
+.header h1 {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+@media (max-width: 767px) {
+  .header {
+    margin-bottom: 0;
+  }
+}
+
 .headerDivide {
+  border-bottom: 1px solid #ffd153;
   margin-bottom: 0;
 }
 
-.servcieList {
+.choiceList {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  white-space: nowrap;
+  overflow-x: scroll;
   margin-bottom: 64px;
   margin-right: -8px;
   margin-left: -8px;
-  white-space: nowrap;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  overflow-x: scroll;
 }
 @media (max-width: 767px) {
-  .servcieList {
+  .choiceList {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
     margin-right: -6px;
     margin-left: -6px;
     margin-bottom: 32px;
   }
 }
 
-.serviceItem {
+.choiceItem {
   margin-right: 8px;
   margin-left: 8px;
   border-radius: 27px;
 }
-.serviceItem a {
+.choiceItem a {
   padding: 12px 32px;
   text-align: center;
 }
-.serviceItem a.active {
+.choiceItem a.active {
   background-color: #56c4c5;
   color: white;
 }
 @media (max-width: 767px) {
-  .serviceItem {
+  .choiceItem {
     margin-right: 6px;
     margin-left: 6px;
   }
-  .serviceItem a {
+  .choiceItem a {
     padding: 8px 16px;
   }
 }
@@ -186,21 +221,20 @@
     padding: 16px;
   }
 }
-
-.QATitle.active {
-  font-weight: bold;
-  color: #56c4c5;
+.QAList.active .fa-minus {
+  display: block;
 }
-
-.fa-plus.active {
+.QAList.active .fa-plus {
   display: none;
 }
 
 .fa-minus {
   display: none;
 }
-.fa-minus.active {
-  display: block;
+
+.QATitle.active {
+  font-weight: bold;
+  color: #56c4c5;
 }
 
 .QAcontent {

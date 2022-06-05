@@ -78,6 +78,11 @@ $item-bg: #f5f5f5;
 .mb-48 {
   margin-bottom: 48px;
 }
+.mb-mb-48 {
+  @media (min-width: 768px) {
+    margin-bottom: 48px;
+  }
+}
 .mb-mb-100 {
   @media (min-width: 768px) {
     margin-bottom: 100px;
@@ -134,12 +139,22 @@ $item-bg: #f5f5f5;
     flex-wrap: wrap;
   }
 }
+// 定位
+.po-r {
+  position: relative;
+}
+.po-a {
+  position: absolute;
+}
+// 電腦版有，手機板沒有
 .d-sm-none {
   display: block;
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
+    // 767以下沒有
     display: none;
   }
 }
+// 電腦版沒有，手機板有
 .d-sm-block {
   display: block;
   @media (min-width: 767px) {

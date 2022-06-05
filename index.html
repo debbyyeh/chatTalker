@@ -14,6 +14,11 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
     />
+    <!-- swiper -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="./dist/css/all.css" />
     <link rel="stylesheet" href="./dist/css/index.css" />
     <title>chatTalker-首頁</title>
@@ -25,7 +30,7 @@
         <h1><a href="index.html" class="logo">chatTalker</a></h1>
         <a href="service.html" class="serviceBtn">方案費用</a>
       </div>
-      <div class="headerDivide d-sm-block"></div>
+      <div class="headerDivideIndex d-sm-block"></div>
       <div class="container mx-auto">
         <div class="banner">
           <div class="bannerText">
@@ -51,8 +56,9 @@
         </div>
       </div>
     </div>
-    <div class="container mx-auto">
-      <div class="social mb-mb-100 mb-sm-60">
+    <div class="social mb-mb-100 mb-sm-60">
+      <div class="socialBall"></div>
+      <div class="container mx-auto">
         <h2 class="subtitle text-center fw-b mb-48">三大平台，我來搞定</h2>
         <ul class="socialLict d-flex alc flex-mb-wrap">
           <li class="social-1">
@@ -96,63 +102,65 @@
         </ul>
       </div>
     </div>
-    <div class="highlights mb-mb-100 mb-sm-60">
-      <div class="middleBall"></div>
+    <div class="highlights mb-mb-100">
+      <div class="highlightsBall d-sm-none"></div>
       <div class="container mx-auto">
-        <h3 class="subtitle fw-b text-center mb-16">任何的角色，我都能給</h3>
-        <p class="text text-center mb-48">
-          量身打造您想要的專屬服務，幫助您迅速判斷成效、並加快決策
-        </p>
-        <ul class="contentList d-flex jcsb flex-lg-wrap flex-mb-wrap">
-          <li class="contentItem card card-shadow">
-            <div class="contentPic mb-16">
-              <img
-                src="https://raw.githubusercontent.com/debbyyeh/chatTalker/main/dist/image/ch01.svg"
-                alt=""
-              />
-            </div>
-            <div class="content">
-              <p class="text-primary mb-16">活動主</p>
-              <p>用戶數位足跡掌握在手 精準取得客戶輪廓，提供分析</p>
-            </div>
-          </li>
-          <li class="contentItem card card-shadow">
-            <div class="contentPic mb-16">
-              <img
-                src="https://raw.githubusercontent.com/debbyyeh/chatTalker/main/dist/image/ch02.svg"
-                alt=""
-              />
-            </div>
-            <div class="content">
-              <p class="text-primary mb-16">創作者</p>
-              <p>自由設計互動腳本 輕鬆整合各項數據</p>
-            </div>
-          </li>
-          <li class="contentItem card card-shadow">
-            <div class="contentPic mb-16">
-              <img
-                src="https://raw.githubusercontent.com/debbyyeh/chatTalker/main/dist/image/ch03.svg"
-                alt=""
-              />
-            </div>
-            <div class="content">
-              <p class="text-primary mb-16">企業品牌</p>
-              <p>多元資料整合，做出服務差異化 幫助企業加速決策</p>
-            </div>
-          </li>
-          <li class="contentItem card card-shadow">
-            <div class="contentPic mb-16">
-              <img
-                src="https://raw.githubusercontent.com/debbyyeh/chatTalker/main/dist/image/ch04.svg"
-                alt=""
-              />
-            </div>
-            <div class="content">
-              <p class="text-primary mb-16">其他</p>
-              <p>創造更多可能...</p>
-            </div>
-          </li>
-        </ul>
+        <div class="mb-mb-100 mb-sm-60">
+          <h2 class="subtitle fw-b text-center mb-16">任何的角色，我都能給</h2>
+          <p class="text-center text mb-mb-48 mb-32">
+            量身打造您想要的專屬服務，幫助您迅速判斷成效、並加快決策
+          </p>
+          <ul class="highlightList d-flex jcc">
+            <li class="card card-shadow">
+              <div class="highlightsPic">
+                <img
+                  src="https://raw.githubusercontent.com/debbyyeh/chatTalker/main/dist/image/ch01.svg"
+                  alt=""
+                />
+              </div>
+              <div class="highlightContent text-center">
+                <p class="text-primary mb-16">活動主</p>
+                <p>用戶數位足跡掌握在手 精準取得客戶輪廓，提供分析</p>
+              </div>
+            </li>
+            <li class="card card-shadow">
+              <div class="highlightsPic">
+                <img
+                  src="https://raw.githubusercontent.com/debbyyeh/chatTalker/main/dist/image/ch02.svg"
+                  alt=""
+                />
+              </div>
+              <div class="highlightContent text-center">
+                <p class="text-primary mb-16">創作者</p>
+                <p>自由設計互動腳本 輕鬆整合各項數據</p>
+              </div>
+            </li>
+            <li class="card card-shadow">
+              <div class="highlightsPic">
+                <img
+                  src="https://raw.githubusercontent.com/debbyyeh/chatTalker/main/dist/image/ch03.svg"
+                  alt=""
+                />
+              </div>
+              <div class="highlightContent text-center">
+                <p class="text-primary mb-16">企業品牌</p>
+                <p>多元資料整合，做出服務差異化 幫助企業加速決策</p>
+              </div>
+            </li>
+            <li class="card card-shadow">
+              <div class="highlightsPic">
+                <img
+                  src="https://raw.githubusercontent.com/debbyyeh/chatTalker/main/dist/image/ch04.svg"
+                  alt=""
+                />
+              </div>
+              <div class="highlightContent text-center">
+                <p class="text-primary mb-16">其他</p>
+                <p>創造更多可能...</p>
+              </div>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
     <div class="container mx-auto">
@@ -216,84 +224,244 @@
         </div>
       </div>
     </div>
-    <div class="comment mb-mb-100 mb-sm-60">
-      <div class="container mx-auto">
+    <section class="comment mb-mb-100 mb-sm-60">
+      <div class="container mx-auto po-r">
+        <div class="commentBall"></div>
         <h3 class="subtitle fw-b text-center">好評如潮</h3>
-        <ul class="commentList">
-          <li class="commentItem card card-shadow">
-            <div class="commentBall"></div>
-            <div class="commentPic">
-              <img
-                src="https://raw.githubusercontent.com/debbyyeh/chatTalker/main/dist/image/user01.jpg"
-                alt="user1"
-              />
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="commentItem card card-shadow">
+                <!-- <div class="commentBall commentBallPC"></div> -->
+                <div class="commentPic">
+                  <img
+                    src="https://raw.githubusercontent.com/debbyyeh/chatTalker/main/dist/image/user01.jpg"
+                    alt="user1"
+                  />
+                </div>
+                <p class="mb-24">
+                  原來聊天機器人可以這麼有人性！團隊有完整的行銷計畫提供數位整合，讓我們公司的產品用更活潑的方式讓使用者認識。
+                </p>
+                <div class="divide mb-24"></div>
+                <p class="fw-b mb-8">清心寡慾設計公司</p>
+                <div class="d-flex jcsb">
+                  <p>Lina 執行長</p>
+                  <ul class="d-flex">
+                    <li><i class="fas fa-solid fa-star"></i></li>
+                    <li><i class="fas fa-solid fa-star"></i></li>
+                    <li><i class="fas fa-solid fa-star"></i></li>
+                    <li><i class="fas fa-solid fa-star"></i></li>
+                    <li><i class="fas fa-solid fa-star"></i></li>
+                  </ul>
+                </div>
+              </div>
             </div>
-            <p class="mb-24">
-              原來聊天機器人可以這麼有人性！團隊有完整的行銷計畫提供數位整合，讓我們公司的產品用更活潑的方式讓使用者認識。
-            </p>
-            <div class="divide mb-24"></div>
-            <p class="fw-b mb-8">清心寡慾設計公司</p>
-            <div class="d-flex jcsb">
-              <p>Lina 執行長</p>
-              <ul class="d-flex">
-                <li><i class="fas fa-solid fa-star"></i></li>
-                <li><i class="fas fa-solid fa-star"></i></li>
-                <li><i class="fas fa-solid fa-star"></i></li>
-                <li><i class="fas fa-solid fa-star"></i></li>
-                <li><i class="fas fa-solid fa-star"></i></li>
-              </ul>
+            <div class="swiper-slide">
+              <div class="commentItem card card-shadow">
+                <div class="commentPic">
+                  <img
+                    src="https://raw.githubusercontent.com/debbyyeh/chatTalker/main/dist/image/user02.jpg"
+                    alt="user2"
+                  />
+                </div>
+                <p class="mb-24">
+                  團隊很積極的協助行銷追蹤，針對機器人進行優化，讓我們一個月內提高10000個追蹤者，客戶體驗回饋很正面！
+                </p>
+                <div class="divide mb-24"></div>
+                <p class="fw-b mb-8">subwhat 行銷公司</p>
+                <div class="d-flex jcsb">
+                  <p>Zoe 活動長</p>
+                  <ul class="d-flex">
+                    <li><i class="fas fa-solid fa-star"></i></li>
+                    <li><i class="fas fa-solid fa-star"></i></li>
+                    <li><i class="fas fa-solid fa-star"></i></li>
+                    <li><i class="fas fa-solid fa-star"></i></li>
+                    <li><i class="fas fa-solid fa-star"></i></li>
+                  </ul>
+                </div>
+              </div>
             </div>
-          </li>
-          <li class="commentItem card card-shadow">
-            <div class="commentPic">
-              <img
-                src="https://raw.githubusercontent.com/debbyyeh/chatTalker/main/dist/image/user02.jpg"
-                alt="user2"
-              />
+            <div class="swiper-slide">
+              <div class="commentItem card card-shadow">
+                <div class="commentPic">
+                  <img
+                    src="https://raw.githubusercontent.com/debbyyeh/chatTalker/main/dist/image/user03.jpg"
+                    alt="user3"
+                  />
+                </div>
+                <p class="mb-24">
+                  經營了好久的IG，一直無法提升粉絲數，和團隊合作後，才知道可以用聊天機器人玩這麼豐富的行銷活動！太讚拉～
+                </p>
+                <div class="divide mb-24"></div>
+                <p class="fw-b mb-8">油土伯</p>
+                <div class="d-flex jcsb">
+                  <p>HowBig</p>
+                  <ul class="d-flex">
+                    <li><i class="fas fa-solid fa-star"></i></li>
+                    <li><i class="fas fa-solid fa-star"></i></li>
+                    <li><i class="fas fa-solid fa-star"></i></li>
+                    <li><i class="fas fa-solid fa-star"></i></li>
+                    <li><i class="fas fa-solid fa-star"></i></li>
+                  </ul>
+                </div>
+              </div>
             </div>
-            <p class="mb-24">
-              團隊很積極的協助行銷追蹤，針對機器人進行優化，讓我們一個月內提高10000個追蹤者，客戶體驗回饋很正面！
-            </p>
-            <div class="divide mb-24"></div>
-            <p class="fw-b mb-8">subwhat 行銷公司</p>
-            <div class="d-flex jcsb">
-              <p>Zoe 活動長</p>
-              <ul class="d-flex">
-                <li><i class="fas fa-solid fa-star"></i></li>
-                <li><i class="fas fa-solid fa-star"></i></li>
-                <li><i class="fas fa-solid fa-star"></i></li>
-                <li><i class="fas fa-solid fa-star"></i></li>
-                <li><i class="fas fa-solid fa-star"></i></li>
-              </ul>
+            <div class="swiper-slide">
+              <div class="commentItem card card-shadow">
+                <div class="commentPic">
+                  <img
+                    src="https://raw.githubusercontent.com/debbyyeh/chatTalker/main/dist/image/user01.jpg"
+                    alt="user1"
+                  />
+                </div>
+                <p class="mb-24">
+                  原來聊天機器人可以這麼有人性！團隊有完整的行銷計畫提供數位整合，讓我們公司的產品用更活潑的方式讓使用者認識。
+                </p>
+                <div class="divide mb-24"></div>
+                <p class="fw-b mb-8">清心寡慾設計公司</p>
+                <div class="d-flex jcsb">
+                  <p>Lina 執行長</p>
+                  <ul class="d-flex">
+                    <li><i class="fas fa-solid fa-star"></i></li>
+                    <li><i class="fas fa-solid fa-star"></i></li>
+                    <li><i class="fas fa-solid fa-star"></i></li>
+                    <li><i class="fas fa-solid fa-star"></i></li>
+                    <li><i class="fas fa-solid fa-star"></i></li>
+                  </ul>
+                </div>
+              </div>
             </div>
-          </li>
-          <li class="commentItem card card-shadow">
-            <div class="commentPic">
-              <img
-                src="https://raw.githubusercontent.com/debbyyeh/chatTalker/main/dist/image/user03.jpg"
-                alt="user3"
-              />
+            <div class="swiper-slide">
+              <div class="commentItem card card-shadow">
+                <div class="commentPic">
+                  <img
+                    src="https://raw.githubusercontent.com/debbyyeh/chatTalker/main/dist/image/user02.jpg"
+                    alt="user2"
+                  />
+                </div>
+                <p class="mb-24">
+                  團隊很積極的協助行銷追蹤，針對機器人進行優化，讓我們一個月內提高10000個追蹤者，客戶體驗回饋很正面！
+                </p>
+                <div class="divide mb-24"></div>
+                <p class="fw-b mb-8">subwhat 行銷公司</p>
+                <div class="d-flex jcsb">
+                  <p>Zoe 活動長</p>
+                  <ul class="d-flex">
+                    <li><i class="fas fa-solid fa-star"></i></li>
+                    <li><i class="fas fa-solid fa-star"></i></li>
+                    <li><i class="fas fa-solid fa-star"></i></li>
+                    <li><i class="fas fa-solid fa-star"></i></li>
+                    <li><i class="fas fa-solid fa-star"></i></li>
+                  </ul>
+                </div>
+              </div>
             </div>
-            <p class="mb-24">
-              經營了好久的IG，一直無法提升粉絲數，和團隊合作後，才知道可以用聊天機器人玩這麼豐富的行銷活動！太讚拉～
-            </p>
-            <div class="divide mb-24"></div>
-            <p class="fw-b mb-8">油土伯</p>
-            <div class="d-flex jcsb">
-              <p>HowBig</p>
-              <ul class="d-flex">
-                <li><i class="fas fa-solid fa-star"></i></li>
-                <li><i class="fas fa-solid fa-star"></i></li>
-                <li><i class="fas fa-solid fa-star"></i></li>
-                <li><i class="fas fa-solid fa-star"></i></li>
-                <li><i class="fas fa-solid fa-star"></i></li>
-              </ul>
+            <div class="swiper-slide">
+              <div class="commentItem card card-shadow">
+                <div class="commentPic">
+                  <img
+                    src="https://raw.githubusercontent.com/debbyyeh/chatTalker/main/dist/image/user03.jpg"
+                    alt="user3"
+                  />
+                </div>
+                <p class="mb-24">
+                  經營了好久的IG，一直無法提升粉絲數，和團隊合作後，才知道可以用聊天機器人玩這麼豐富的行銷活動！太讚拉～
+                </p>
+                <div class="divide mb-24"></div>
+                <p class="fw-b mb-8">油土伯</p>
+                <div class="d-flex jcsb">
+                  <p>HowBig</p>
+                  <ul class="d-flex">
+                    <li><i class="fas fa-solid fa-star"></i></li>
+                    <li><i class="fas fa-solid fa-star"></i></li>
+                    <li><i class="fas fa-solid fa-star"></i></li>
+                    <li><i class="fas fa-solid fa-star"></i></li>
+                    <li><i class="fas fa-solid fa-star"></i></li>
+                  </ul>
+                </div>
+              </div>
             </div>
-          </li>
-        </ul>
+            <div class="swiper-slide">
+              <div class="commentItem card card-shadow">
+                <div class="commentPic">
+                  <img
+                    src="https://raw.githubusercontent.com/debbyyeh/chatTalker/main/dist/image/user01.jpg"
+                    alt="user1"
+                  />
+                </div>
+                <p class="mb-24">
+                  原來聊天機器人可以這麼有人性！團隊有完整的行銷計畫提供數位整合，讓我們公司的產品用更活潑的方式讓使用者認識。
+                </p>
+                <div class="divide mb-24"></div>
+                <p class="fw-b mb-8">清心寡慾設計公司</p>
+                <div class="d-flex jcsb">
+                  <p>Lina 執行長</p>
+                  <ul class="d-flex">
+                    <li><i class="fas fa-solid fa-star"></i></li>
+                    <li><i class="fas fa-solid fa-star"></i></li>
+                    <li><i class="fas fa-solid fa-star"></i></li>
+                    <li><i class="fas fa-solid fa-star"></i></li>
+                    <li><i class="fas fa-solid fa-star"></i></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="commentItem card card-shadow">
+                <div class="commentPic">
+                  <img
+                    src="https://raw.githubusercontent.com/debbyyeh/chatTalker/main/dist/image/user02.jpg"
+                    alt="user2"
+                  />
+                </div>
+                <p class="mb-24">
+                  團隊很積極的協助行銷追蹤，針對機器人進行優化，讓我們一個月內提高10000個追蹤者，客戶體驗回饋很正面！
+                </p>
+                <div class="divide mb-24"></div>
+                <p class="fw-b mb-8">subwhat 行銷公司</p>
+                <div class="d-flex jcsb">
+                  <p>Zoe 活動長</p>
+                  <ul class="d-flex">
+                    <li><i class="fas fa-solid fa-star"></i></li>
+                    <li><i class="fas fa-solid fa-star"></i></li>
+                    <li><i class="fas fa-solid fa-star"></i></li>
+                    <li><i class="fas fa-solid fa-star"></i></li>
+                    <li><i class="fas fa-solid fa-star"></i></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="commentItem card card-shadow">
+                <div class="commentPic">
+                  <img
+                    src="https://raw.githubusercontent.com/debbyyeh/chatTalker/main/dist/image/user03.jpg"
+                    alt="user3"
+                  />
+                </div>
+                <p class="mb-24">
+                  經營了好久的IG，一直無法提升粉絲數，和團隊合作後，才知道可以用聊天機器人玩這麼豐富的行銷活動！太讚拉～
+                </p>
+                <div class="divide mb-24"></div>
+                <p class="fw-b mb-8">油土伯</p>
+                <div class="d-flex jcsb">
+                  <p>HowBig</p>
+                  <ul class="d-flex">
+                    <li><i class="fas fa-solid fa-star"></i></li>
+                    <li><i class="fas fa-solid fa-star"></i></li>
+                    <li><i class="fas fa-solid fa-star"></i></li>
+                    <li><i class="fas fa-solid fa-star"></i></li>
+                    <li><i class="fas fa-solid fa-star"></i></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
       </div>
-    </div>
-    <div class="footer">
+    </section>
+    <section class="footer">
       <div class="mb-mb-100 mb-sm-60">
         <h3 class="fw-b text-center">
           \ 美好用戶體驗，從對話開始 /
@@ -302,9 +470,25 @@
           方案費用
         </a>
       </div>
-    </div>
+    </section>
     <div class="right">
       <p class="text-center">© 2022 chatTalker. All Rights Reserved.</p>
     </div>
+    <div class="backTop">
+      <a href="#" id="" class="scrollBtn fw-b text-center">TOP</a>
+    </div>
+
+    <!-- swiper -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script></script>
+    <!-- Jquery -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- JS -->
+    <script src="./dist/all.js"></script>
   </body>
 </html>
