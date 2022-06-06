@@ -55,7 +55,7 @@ $(document).ready(function () {
 
   // swiper
   var swiper = new Swiper('.mySwiper', {
-    slidesPerView: '1',
+    slidesPerView: 1,
     centeredSlides: true,
     spaceBetween: 16,
     pagination: {
@@ -63,13 +63,15 @@ $(document).ready(function () {
       clickable: true,
     },
     breakpoints: {
-      768: {
-        slidesPerView: 2,
-        spaceBetween: 16,
-      },
       992: {
         slidesPerView: 3,
         spaceBetween: 16,
+        centeredSlides: false,
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 16,
+        centeredSlides: false,
       },
     },
   })
